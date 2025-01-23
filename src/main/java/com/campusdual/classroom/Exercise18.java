@@ -4,17 +4,23 @@ package com.campusdual.classroom;
 public class Exercise18 {
 
 
+	public static void main(String[] args) {
+		//int[] intArray = createAndInitializeArray(4);
+		showInlineArray(createAndInitializeArray(4)); //refactorizado
+	}
+
+
 	//reciba por parámetro un número entero //devuelva un array de tipo int.
-	public static int [] createAndInitializeArray (int numeros) {
-		int[] intArray = new int[numeros];
-		for (int i = 0; i < numeros; i++) {
-			intArray[i] = i + 1;
+	public static int [] createAndInitializeArray (int size) {
+		int[] intArray = new int[size];
+		for (int i = 0; i < size; i++) {
+			intArray[i] = i + 1; // rellenar el array
 		}
 		return intArray;
     }
 
 	public static void showInlineArray(int [] intArray) {
-		//int [] intArray = { 1, 2, 3, 4, 5,};
+
 
 		for (int i = 0; i < intArray.length; i++) {
 			// Solo añadimos un espacio entre los números, no después del último
@@ -25,12 +31,9 @@ public class Exercise18 {
 				System.out.print(" "); // Imprime un espacio solo entre los números
 			}
 		}
-		System.out.println(); // Imprimimos una nueva línea al final
+
 	}
 
-	public static void main(String[] args) {
-			int[] intArray = createAndInitializeArray(4);
-			showInlineArray(intArray);
-		}
+
 
 }
